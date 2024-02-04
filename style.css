@@ -1,4 +1,5 @@
 body {
+    
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -96,13 +97,7 @@ nav {
     color: #ddd;
 }
 
-.hamburger {
-    display: none;
-    position: relative;
-    top: 2.5vh;
-    flex-direction: column;
-    cursor: pointer;
-}
+
 
 .bar {
     width: 25px;
@@ -172,6 +167,10 @@ border-color: #fff;
 border-style: groove;
 transition: 1.5s;
     text-decoration: none;
+    animation-name: cv;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .links{
     height: 5vh;
@@ -213,17 +212,40 @@ color: rgb(38, 38, 184);}
     transition: 1.5s;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+.hamburger {
+    display: none;
+    position: relative;
+    bottom: 9vh;
+    left: 84vw;
+    flex-direction: column;
+    cursor: pointer;
+}
+
 
 /* Media Queries for Responsive Design */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    html{
+        scroll-behavior: smooth;
+    }
     header {
-        padding: 10px 0;
+        padding: 1px 0;
+    }
+    .container h1{
+        position: relative;
+        top: 3vh;
+        font-style: normal;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
         width: 100%;
+        
+        
         position: absolute;
         top: 60px;
         left: 0;
@@ -233,6 +255,9 @@ color: rgb(38, 38, 184);}
 
     .nav-list.show {
         display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        height: 20vh;
     }
 
     .nav-list li {
@@ -248,7 +273,12 @@ color: rgb(38, 38, 184);}
 
     .hamburger {
         display: flex;
+        
+        position: relative;
+        
+        
     }
+    
 
     .bar {
         background-color: #fff;
@@ -258,9 +288,9 @@ color: rgb(38, 38, 184);}
         width: 15vw;
         position: relative;
         left: 70vw;
-        top: 9vh;
-        height: 7vh;
-        border-radius: 115px;
+        top: 11vh;
+        height: 6vh;
+        border-radius: 15px;
         animation-name: pic;
         animation-duration: 1s;
         animation-delay: 1s;
@@ -270,31 +300,44 @@ color: rgb(38, 38, 184);}
     }
     .pic{
     
-        width: 15vw;
+        width: 13vw;
         position: relative;
+        left: 7vw;
         
-        top: vh;
+        bottom: 28vh;
         height: 7vh;
-        border-radius: 115px;
+        border-radius: 345px;
+        animation-name: pic;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        
         
     
     }
     #resume{
-        font-size: 2.5vh;
+        font-size: 2vh;
         position: relative;
-        left: 16vw;
+        left: 27vw;
         
-        letter-spacing: 1vw;
+        
+        letter-spacing: vw;
         top: 8vh;   
-    border: solid;
-    border-color: #fff;
-    border-style: groove;
+    border: 1px solid;
+   
+    border-style: ;
+
         text-decoration: none;
+        animation-name: cv;
+        animation-duration: 2s;
+        animation-delay: 2s;
+     
     }
     .links{
         height: 5vh;
         position: relative;
-        left: -4vw;
+        left: vw;
+        font-size: 2vh;
+        
         
         
     }
@@ -302,35 +345,50 @@ color: rgb(38, 38, 184);}
     #icon{
         text-decoration: none;
         position: relative;
-         color: chocolate;
+         
+         
          position: relative;
-         left: 4vw;
+         left: 2vw;
+         font-size: 1.5vh;
+         color: #ddd;
+         
     }
     
     @keyframes pic{
         from{
-            transform: translatex(500px);
+            transform: translatex(200%);
         }to{
            
         }
     }
     @keyframes para{
         from{
-    
+            transform: translatey(109%);
     
         }to{
-            transform: translateX(105%);
+            
         }
+    }
+    @keyframes cv {
+        from{
+             transform: translateX(100%);
+        }to{
+
+        }
+        
     }
     .para{
         position: relative;
-        right: 96vw;
+        left: 1vw;
+        top: 100vh;
         
-        font-size: 20px;
+        font-size: 19px;
         
         animation-name: para;
-         animation-duration: 1.5s;
-         animation-delay: 1s;
+         animation-duration: 1s;
+         
+         animation-delay: 0.5s;
+         
          animation-fill-mode: forwards; 
     }
 }
