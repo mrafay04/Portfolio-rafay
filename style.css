@@ -56,7 +56,7 @@ header {
     background-color:rgb(67, 65, 65);
     color: #fff;
     padding: 15px 0;
-    transition: padding 0.5s ease;
+    transition: padding 5s ease;
 }
 
 header h1 {
@@ -90,7 +90,7 @@ nav {
 .nav-list a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .nav-list a:hover {
@@ -225,6 +225,7 @@ html{
 }
 
 
+
 /* Media Queries for Responsive Design */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     html{
@@ -238,8 +239,27 @@ html{
         top: 3vh;
         font-style: normal;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation-name: header;
+        animation-iteration-count: infinite;
+        
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.88, 0.02, 0.47, 0.71)
+        
     }
-
+.img{
+    margin: auto;
+    padding: auto;
+    position: relative;
+    right: vw;
+    width: 100%;
+    height: 38vh;
+    border-radius: 15px;
+    
+    animation-name: img;
+    animation-duration: 1.5s;
+    animation-delay: 0.5;
+    animation-fill-mode: forwards;
+}
     .nav-list {
         display: none;
         flex-direction: column;
@@ -258,6 +278,11 @@ html{
         width: 100%;
         justify-content: flex-start;
         height: 20vh;
+        animation-name: nav;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    background-color:rgb(67, 65, 65);
+    
     }
 
     .nav-list li {
@@ -300,13 +325,13 @@ html{
     }
     .pic{
     
-        width: 13vw;
+        width: 13.5vw;
         position: relative;
-        left: 7vw;
+        left: vw;
         
         bottom: 28vh;
-        height: 7vh;
-        border-radius: 345px;
+        height: 6vh;
+        border-radius: 445px;
         animation-name: pic;
         animation-duration: 1s;
         animation-delay: 1s;
@@ -317,20 +342,21 @@ html{
     #resume{
         font-size: 2vh;
         position: relative;
-        left: 27vw;
-        
-        
+        left: 26vw;
+        border: solid;
+        padding: 8px;
+        border-radius: 15px;
+        color: #fff;
+        border-color: blue;
         letter-spacing: vw;
         top: 8vh;   
-    border: 1px solid;
-   
-    border-style: ;
-
-        text-decoration: none;
-        animation-name: cv;
-        animation-duration: 2s;
-        animation-delay: 2s;
+   text-decoration: none;
      
+     
+    }
+    #resume a:visited{
+        color: blue;
+        transition: 1.5s;
     }
     .links{
         height: 5vh;
@@ -377,6 +403,29 @@ html{
         }
         
     }
+    @keyframes nav {
+        from{
+            transform: translateX(100%);
+        }to{
+
+        }
+        
+    }
+    @keyframes header {
+        from{
+            
+        }to{
+            transform: translatex(0.5%);
+        }
+        
+    }
+    @keyframes img{
+        from{
+            transform: translatey(100%);
+        }to{
+            
+        }
+    }
     .para{
         position: relative;
         left: 1vw;
@@ -385,10 +434,223 @@ html{
         font-size: 19px;
         
         animation-name: para;
-         animation-duration: 1s;
+         animation-duration: 1.5s;
          
          animation-delay: 0.5s;
          
          animation-fill-mode: forwards; 
     }
+    
+} 
+@media only screen and (min-width:481px) and (max-width:768px) {
+    body {
+    
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color:rgb(8, 0, 0);
+        transition: background-color 0.5s ease;
+        
+    }
+    
+    
+    
+    .profile{
+        border: 1px ;
+        width: 6vw;
+        position: relative;
+        left: vw;
+        top: 9vh;
+        height: 10vh;
+        border-radius: 115px;
+        animation-name: pic;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    @keyframes pic{
+        from{
+            transform: translatex(100%);
+        }to{
+           
+        }
+    }
+    .pic{
+        
+        width: 13vw;
+        position: relative;
+        
+        bottom: 27.5vh;
+        height: 11vh;
+        border-radius: 315px;
+    
+    }
+    .container  {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        
+        padding: 10px;
+        line-height: 3vh;
+        
+    }
+    
+    
+    header {
+        background-color:rgb(67, 65, 65);
+        color: #fff;
+        padding: 1px 0;
+        transition: padding 5s ease;
+    }
+    
+    header h1 {
+        margin: 30;
+        position: relative;
+        bottom: 2vh;
+    }
+    a:hover{
+        color: chocolate;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        
+    }
+    
+    .nav-list li {
+        margin-right: 50px;
+        font-size: 2vh;
+        letter-spacing: 1px;
+    }
+    
+    .nav-list a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.2s ease;
+    }
+    
+    .nav-list a:hover {
+        color: #ddd;
+    }
+    
+    
+    
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: background-color 0.3s ease;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+    
+    project {
+        margin-bottom: 30px;
+    }
+    
+    
+    
+    
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    
+    footer {
+        background-color:rgb(67, 65, 65);
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    #resume{
+        font-size: 2vh;
+        position: relative;
+        left: 37vw;
+        top: -vh;   
+    color: #fff;
+    border-style: none;
+    border: solid;
+    padding: 8px;
+    border-radius: 15px;
+    color: #fff;
+    border-color: blue;
+   
+   
+    
+    }
+    #resume a:hover{
+        color: blue;
+        transition: 1.5s;
+    }
+    .links{
+        height: 5vh;
+        position: relative;
+        left: vw;
+        
+        
+    }
+    
+    #icon{
+        text-decoration: none;
+        position: relative;
+         color: chocolate;
+         position: relative;
+         left: 1vw;
+    }
+    contact > a:visited{
+    color: rgb(38, 38, 184);}
+    
+    @keyframes para{
+        from{
+    
+    
+        }to{
+            transform: translatex(103%);
+        }
+    }
+    .para{
+        position: relative;
+        right: 100vw;
+        font-size: 2vh;
+        animation-name: para;
+         animation-duration: 1.5s;
+         animation-delay: 1s;
+         animation-fill-mode: forwards; 
+    }
+    #contact a:hover{
+        color: blue;
+        transition: 1.5s;
+    }
+    
+    html{
+        scroll-behavior: smooth;
+    }
+    
 }
